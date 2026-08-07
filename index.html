@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jathin Bhargav - Portfolio</title>
+  
+  <!-- Instantly loads Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Instantly loads Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Base Styles -->
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #d4d4d8;
+    }
+    .bg-grid {
+      background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), 
+                        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    /* Simple fade-in animation */
+    .fade-in {
+      animation: fadeIn 1s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="min-h-screen p-4 md:p-8 lg:p-12 relative selection:bg-white/20">
+
+  <!-- Background Grid Effect -->
+  <div class="fixed inset-0 z-0 pointer-events-none bg-grid"></div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+    
+    <!-- Header -->
+    <header class="flex justify-between items-center mb-12 fade-in" style="animation-delay: 0.1s;">
+      <div class="flex items-center gap-2 text-white font-semibold text-xl tracking-tight">
+        <i data-lucide="terminal" class="w-6 h-6 text-blue-400"></i>
+        <span>jathin.dev</span>
+      </div>
+      <a href="mailto:hello@example.com" class="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-white text-sm font-medium transition-all flex items-center gap-2 backdrop-blur-md">
+        <i data-lucide="mail" class="w-4 h-4"></i>
+        <span class="hidden sm:inline">Let's Talk</span>
+      </a>
+    </header>
+
+    <!-- Bento Grid Layout -->
+    <main class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 auto-rows-[minmax(180px,auto)] gap-4 md:gap-6">
+      
+      <!-- 1. Hero / Intro Box -->
+      <div class="col-span-1 md:col-span-2 lg:col-span-2 row-span-2 bg-gradient-to-br from-zinc-900 to-zinc-950 border border-white/10 rounded-3xl p-8 flex flex-col justify-between group hover:border-white/20 transition-all overflow-hidden relative fade-in" style="animation-delay: 0.2s;">
+        <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+          <i data-lucide="code-2" class="w-32 h-32"></i>
+        </div>
+        <div>
+          <div class="inline-block px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-semibold tracking-wider mb-6 border border-blue-500/20">
+            INDEPENDENT BUILDER
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight leading-tight">
+            Hi, I'm Jathin Bhargav. <br/>
+            <span class="text-zinc-500">Independent Software Developer</span>
+          </h1>
+        </div>
+        <p class="text-zinc-400 text-lg leading-relaxed max-w-md mt-6">
+          I build custom tools, full-stack websites, and mobile applications from the ground up, specializing in C++, Python, React, and Kotlin.
+        </p>
+      </div>
+
+      <!-- 2. Map / Location Box -->
+      <div class="col-span-1 md:col-span-1 lg:col-span-1 row-span-1 bg-zinc-900 border border-white/10 rounded-3xl p-6 flex flex-col items-center justify-center relative overflow-hidden group hover:border-white/20 transition-all fade-in" style="animation-delay: 0.3s;">
+        <i data-lucide="map-pin" class="w-10 h-10 text-rose-400 mb-3 group-hover:scale-110 group-hover:-translate-y-1 transition-all"></i>
+        <h3 class="text-white font-medium text-lg text-center">Dharmavaram, AP</h3>
+        <p class="text-zinc-500 text-sm mt-1 flex items-center gap-1">
+          <span id="clock">Loading...</span> Local Time
+        </p>
+      </div>
+
+      <!-- 3. Socials Box -->
+      <div class="col-span-1 md:col-span-1 lg:col-span-1 row-span-1 flex flex-row md:flex-col gap-4 fade-in" style="animation-delay: 0.4s;">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="flex-1 bg-zinc-900 border border-white/10 rounded-3xl flex items-center justify-center hover:bg-white/5 hover:border-white/20 transition-all group">
+          <i data-lucide="github" class="w-8 h-8 text-zinc-400 group-hover:text-white transition-colors"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="flex-1 bg-zinc-900 border border-white/10 rounded-3xl flex items-center justify-center hover:bg-[#0A66C2]/20 hover:border-[#0A66C2]/50 transition-all group">
+          <i data-lucide="linkedin" class="w-8 h-8 text-zinc-400 group-hover:text-[#0A66C2] transition-colors"></i>
+        </a>
+      </div>
+
+      <!-- 4. Experience Box -->
+      <div class="col-span-1 md:col-span-2 lg:col-span-2 row-span-1 bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col justify-center group hover:border-white/20 transition-all fade-in" style="animation-delay: 0.5s;">
+        <div class="flex items-center gap-3 mb-6">
+          <i data-lucide="briefcase" class="w-5 h-5 text-zinc-400"></i>
+          <h3 class="text-white font-semibold text-xl">Experience</h3>
+        </div>
+        <div class="space-y-4">
+          <div class="flex justify-between items-center group/item">
+            <div>
+              <h4 class="text-white font-medium group-hover/item:text-blue-400 transition-colors">Independent Developer</h4>
+              <p class="text-zinc-500 text-sm">Self-Employed</p>
+            </div>
+            <div class="text-zinc-500 text-sm font-mono bg-white/5 px-3 py-1 rounded-full">
+              Present
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Skills Box -->
+      <div class="col-span-1 md:col-span-2 lg:col-span-2 row-span-1 bg-zinc-900 border border-white/10 rounded-3xl p-8 group hover:border-white/20 transition-all fade-in" style="animation-delay: 0.6s;">
+        <div class="flex items-center gap-3 mb-6">
+          <i data-lucide="layers" class="w-5 h-5 text-zinc-400"></i>
+          <h3 class="text-white font-semibold text-xl">Tech Stack</h3>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-4 py-2 bg-zinc-950 border border-white/5 text-zinc-300 text-sm rounded-xl hover:bg-white/10 transition-colors">C++</span>
+          <span class="px-4 py-2 bg-zinc-950 border border-white/5 text-zinc-300 text-sm rounded-xl hover:bg-white/10 transition-colors">Python</span>
+          <span class="px-4 py-2 bg-zinc-950 border border-white/5 text-zinc-300 text-sm rounded-xl hover:bg-white/10 transition-colors">React</span>
+          <span class="px-4 py-2 bg-zinc-950 border border-white/5 text-zinc-300 text-sm rounded-xl hover:bg-white/10 transition-colors">Kotlin</span>
+          <span class="px-4 py-2 bg-zinc-950 border border-white/5 text-zinc-300 text-sm rounded-xl hover:bg-white/10 transition-colors">Full-Stack Dev</span>
+          <span class="px-4 py-2 bg-zinc-950 border border-white/5 text-zinc-300 text-sm rounded-xl hover:bg-white/10 transition-colors">Vercel</span>
+          <span class="px-4 py-2 bg-zinc-950 border border-white/5 text-zinc-300 text-sm rounded-xl hover:bg-white/10 transition-colors">Local Hardware Optimization</span>
+        </div>
+      </div>
+
+      <!-- Projects Section Header -->
+      <div class="col-span-1 md:col-span-3 lg:col-span-4 mt-8 mb-2 flex items-center justify-between fade-in" style="animation-delay: 0.7s;">
+        <h2 class="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
+          <i data-lucide="cpu" class="w-8 h-8 text-blue-400"></i>
+          Live Projects
+        </h2>
+      </div>
+
+      <!-- Project 1: Biz Pulse -->
+      <a href="https://biz-pulse-ai-self.vercel.app" target="_blank" rel="noopener noreferrer" class="col-span-1 md:col-span-1 lg:col-span-2 row-span-1 bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/50 hover:border-blue-500/50 fade-in" style="animation-delay: 0.8s;">
+        <div class="flex justify-between items-start mb-6">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center border border-white/5">
+            <i data-lucide="globe" class="w-6 h-6 text-white"></i>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors">
+            <i data-lucide="arrow-up-right" class="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors"></i>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-2">Biz Pulse</h3>
+          <p class="text-zinc-400 mb-6">A streamlined business data application built to calculate operational health scores and generate structured strategic readouts.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono text-zinc-500 bg-black/30 px-3 py-1.5 rounded-lg">Full-Stack</span>
+            <span class="text-xs font-mono text-zinc-500 bg-black/30 px-3 py-1.5 rounded-lg">Data Analytics</span>
+            <span class="text-xs font-mono text-zinc-500 bg-black/30 px-3 py-1.5 rounded-lg">Vercel</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 2: ORBBIT -->
+      <a href="https://jathinorbit.vercel.app" target="_blank" rel="noopener noreferrer" class="col-span-1 md:col-span-1 lg:col-span-2 row-span-1 bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/50 hover:border-rose-500/50 fade-in" style="animation-delay: 0.9s;">
+        <div class="flex justify-between items-start mb-6">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-rose-500/20 to-orange-500/20 flex items-center justify-center border border-white/5">
+            <i data-lucide="globe" class="w-6 h-6 text-white"></i>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors">
+            <i data-lucide="arrow-up-right" class="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors"></i>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-2">ORBBIT Ecosystem</h3>
+          <p class="text-zinc-400 mb-6">An AI-driven search engine ecosystem featuring comprehensive multi-modal UI specifications and advanced web platform integration.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono text-zinc-500 bg-black/30 px-3 py-1.5 rounded-lg">AI Integration</span>
+            <span class="text-xs font-mono text-zinc-500 bg-black/30 px-3 py-1.5 rounded-lg">Web UI</span>
+            <span class="text-xs font-mono text-zinc-500 bg-black/30 px-3 py-1.5 rounded-lg">Search Engine</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 3: Worklevis -->
+      <a href="https://worklevis.vercel.app" target="_blank" rel="noopener noreferrer" class="col-span-1 md:col-span-1 lg:col-span-2 row-span-1 bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/50 hover:border-emerald-500/50 fade-in" style="animation-delay: 1.0s;">
+        <div class="flex justify-between items-start mb-6">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 flex items-center justify-center border border-white/5">
+            <i data-lucide="globe" class="w-6 h-6 text-white"></i>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors">
+            <i data-lucide="arrow-up-right" class="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors"></i>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-2">Worklevis</h3>
+          <p class="text-zinc-400 mb-6">A modern frontend web platform utilizing a component-based framework, designed with a distinct dark space aesthetic and custom typography.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono text-zinc-500 bg-black/30 px-3 py-1.5 rounded-lg">React</span>
+            <span class="text-xs font-mono text-zinc-500 bg-black/30 px-3 py-1.5 rounded-lg">Frontend</span>
+            <span class="text-xs font-mono text-zinc-500 bg-black/30 px-3 py-1.5 rounded-lg">Platform Design</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 4: Project Kinetic (Mobile, no link) -->
+      <a href="#" class="col-span-1 md:col-span-1 lg:col-span-2 row-span-1 bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/50 hover:border-purple-500/50 fade-in" style="animation-delay: 1.1s;">
+        <div class="flex justify-between items-start mb-6">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500/20 to-fuchsia-500/20 flex items-center justify-center border border-white/5">
+            <i data-lucide="cpu" class="w-6 h-6 text-white"></i>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors">
+            <i data-lucide="code-2" class="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors"></i>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-2">Project Kinetic</h3>
+          <p class="text-zinc-400 mb-6">An entirely independent cyberpunk-themed fitness mobile application featuring goal tracking, interactive challenges, and integrated BLE smartwatch connectivity.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono text-zinc-500 bg-black/30 px-3 py-1.5 rounded-lg">Kotlin</span>
+            <span class="text-xs font-mono text-zinc-500 bg-black/30 px-3 py-1.5 rounded-lg">Mobile UI</span>
+            <span class="text-xs font-mono text-zinc-500 bg-black/30 px-3 py-1.5 rounded-lg">BLE Integration</span>
+          </div>
+        </div>
+      </a>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 py-8 text-center border-t border-white/10 text-zinc-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4 fade-in" style="animation-delay: 1.2s;">
+      <p id="footer-year"></p>
+      <p class="flex items-center gap-2">
+        Built with HTML, CSS & JS <i data-lucide="code-2" class="w-4 h-4"></i>
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- JavaScript for Time, Icons, and Dynamic Year -->
+  <script>
+    // 1. Initialize all Lucide Icons
+    lucide.createIcons();
+
+    // 2. Setup the Live Clock
+    function updateClock() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      document.getElementById('clock').textContent = timeString;
+    }
+    
+    // Update immediately, then every 1000ms (1 second)
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    // 3. Dynamic Footer Year
+    const currentYear = new Date().getFullYear();
+    document.getElementById('footer-year').textContent = `© ${currentYear} V. Jathin Bhargav. All rights reserved.`;
+  </script>
+</body>
+</html>
